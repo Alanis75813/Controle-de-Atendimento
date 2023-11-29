@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Senha Prioritária
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="input-container">
+    <ion-label position="floating">Digite a senha prioritária</ion-label>
+    <ion-input type="password" id="senhaPrioritaria" [(ngModel)]="senhaPrioritaria"></ion-input>
+    <ion-button color="light" expand="block" (click)="enviarSenha()">Enviar</ion-button>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ordem das Senhas Solicitadas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list id="ordemSenhas">
+        <ion-item *ngFor="let senha of ordemSenhas">{{ senha }}</ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
